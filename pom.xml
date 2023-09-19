@@ -45,6 +45,8 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+
+		<finalName>student-github-actions</finalName>
 	</build>
 
 </project>
