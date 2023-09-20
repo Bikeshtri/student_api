@@ -20,6 +20,10 @@ on:
         - info
         - warning
         - debug
+      Tags:
+        description: 'Test scenario tags'
+        required: false
+        type: boolean
   push:
     branches: [ "master" ]
   pull_request:
