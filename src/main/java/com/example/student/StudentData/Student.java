@@ -2,9 +2,11 @@ package com.example.student.StudentData;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 
 @Entity
+@Table(name = "students")
 public class Student {
     public Student() {
     }

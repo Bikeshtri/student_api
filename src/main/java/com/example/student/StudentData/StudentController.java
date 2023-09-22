@@ -2,8 +2,10 @@ package com.example.student.StudentData;
 
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,6 +16,10 @@ public class StudentController {
         @Autowired
         private StudentService studentService;
 
+        @Bean
+        public RestTemplate getRestTemplate() {
+            return new RestTemplate();
+        }
         @GetMapping("/students")
         @ApiOperation("Fetches all the students")
         public List<Student> getAllTopics() {
