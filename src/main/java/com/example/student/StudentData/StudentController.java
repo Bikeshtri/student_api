@@ -15,11 +15,7 @@ public class StudentController {
 
         @Autowired
         private StudentService studentService;
-
-        @Bean
-        public RestTemplate getRestTemplate() {
-            return new RestTemplate();
-        }
+        
         @GetMapping("/students")
         @ApiOperation("Fetches all the students")
         public List<Student> getAllTopics() {
