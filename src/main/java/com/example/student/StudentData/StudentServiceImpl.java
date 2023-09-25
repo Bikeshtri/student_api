@@ -16,10 +16,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-@Component
+@Service
 public class StudentServiceImpl implements StudentService {
     @Autowired
     private StudentRepository studentRepository;
+
+    @Autowired
+    EntityManager entityManager;
 
     private static final Logger LOGGER = LoggerFactory.getLogger(StudentServiceImpl.class);
 
