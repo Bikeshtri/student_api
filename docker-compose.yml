@@ -15,6 +15,7 @@ services:
 
   db:
     image: postgres
+    container_name: postgres_docker
     environment:
       POSTGRES_USER: dockeruser
       POSTGRES_PASSWORD: dockerpassword
