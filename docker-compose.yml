@@ -5,7 +5,7 @@ services:
     ports:
       - "8090:8090"
     environment:
-      db-url: jdbc:postgresql://db:5043/students
+      db-url: jdbc:postgresql://db:5432/students
       db-user: dockeruser
       db-password: dockerpassword
     depends_on:
@@ -20,7 +20,7 @@ services:
       POSTGRES_PASSWORD: dockerpassword
       POSTGRES_DB: students
     ports:
-      - "5043:5043"
+      - "5432:5432"
     volumes:
       - C:\MEA ITaaS\postgres_container_data:/var/lib/postgresql/data
     restart: always
