@@ -5,7 +5,7 @@ services:
     ports:
       - "8090:8090"
     environment:
-      db-url: jdbc:postgresql://db:5432/students
+      db-url: jdbc:postgresql://postgres_docker:5432/students
       db-user: dockeruser
       db-password: dockerpassword
     depends_on:
