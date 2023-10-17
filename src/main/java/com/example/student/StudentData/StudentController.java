@@ -18,31 +18,31 @@ public class StudentController {
         
         @GetMapping("/students")
         @ApiOperation("Fetches all the students")
-        public List<Student> getAllTopics() {
+        public List<Student> getAllStudents() {
             return studentService.getAllStudents();
         }
 
         @GetMapping("/students/{id}")
         @ApiOperation("Fetches student based on ID")
-        public Optional<Student> getTopic(@PathVariable String id) {
+        public Optional<Student> getStudent(@PathVariable String id) {
             return studentService.getStudent(id);
         }
 
         @PostMapping(value = "/student")
         @ApiOperation("Adds student to list")
-        public void addTopic(@RequestBody Student student){
+        public void addStudent(@RequestBody Student student){
             studentService.addStudent(student);
         }
 
         @PutMapping(value = "/students/{id}")
         @ApiOperation("Updates specific student details")
-        public void updateTopic(@RequestBody Student student, @PathVariable String id){
+        public void updateStudent(@RequestBody Student student, @PathVariable String id){
             studentService.updateStudent(id, student);
         }
 
         @DeleteMapping(value = "/students/{id}")
         @ApiOperation("Deletes student from list")
-        public void deleteTopic(@PathVariable String id){
+        public void deleteStudent(@PathVariable String id){
             studentService.deleteStudent(id);
         }
     }
